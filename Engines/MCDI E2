@@ -1,0 +1,78 @@
+@name ptgamma/engines/mcdiee1
+#ENGINE CONFIG
+ENG_Version = "2.0.67"
+#For use in things that don't have an engine.
+EngineType = "MCDI EE1" #What is the name of the Prime Mover?
+
+Startup_Hi = "_jazzlok/electric_trains/re460_startup.wav" #Startup Sound to put the engine in High (Normal) Idle.
+Startup_Lo = "_jazzlok/electric_trains/re460_startup.wav" #Startup Sound to put the engine in Low Idle.
+Startup_Mode = 1 #0 for Low, 1 for High
+
+Shutdown_Hi = "_jazzlok/electric_trains/re460_shutdown.wav" #Shutdown Sound from High Idle.
+Shutdown_Lo = "_jazzlok/electric_trains/re460_shutdown.wav" #Shutdown Sound from Low Idle.
+Shutdown_Mode = 1 #0 for Low, 1 for High, 2 for Both as the situation demands it
+
+FuelSaverMode = 0 #If set to 1, the locomotive will go into and out of Low Idle as the reverser is moved in and out of Neutral
+FuelSaverDelay = 0 #Time, in seconds, for engine to fall into Low Idle, if used.
+
+TransitionToLow = "" #Transition sound for High to Low idle, if used.
+TransitionToHigh = "" #Transition sound for Low to High idle, if used.
+Idle_Low = "" #Sound for Low Idle, if used.
+
+
+NumEngineNotches = 8 #Number of Engine Notches, not counting idle.
+
+Notches = array(
+    "floofys_sound_pack/locomotives/electric/us/idle.wav", #Idle 
+    "floofys_sound_pack/locomotives/electric/us/traction.wav", #Notch 1
+    "floofys_sound_pack/locomotives/electric/us/traction.wav", #Notch 2
+    "floofys_sound_pack/locomotives/electric/us/traction.wav", #Notch 3
+    "floofys_sound_pack/locomotives/electric/us/traction.wav",
+    "floofys_sound_pack/locomotives/electric/us/traction.wav",
+    "floofys_sound_pack/locomotives/electric/us/traction.wav",
+    "floofys_sound_pack/locomotives/electric/us/traction.wav",
+    "floofys_sound_pack/locomotives/electric/us/traction.wav"
+)
+
+TransitionPath = ""
+#---------------------0-1,1-2,2-3,3-4,4-5,5-6,6-7,7-8
+EngineBehavior = array(0,  0,  0,  3,  3,  3,  3,  3)
+#0 - A/B Notching
+#1 - Full Sweep
+#2 - Instant Change
+#3 - No Change
+#4 - Override (Full Sweep)
+                #0-1  1-2  2-3  3-4  4-5  5-6  6-7  7-8 
+UpDelays = array(0,0,0,0,0,0,0,0) 
+                  #8-7  7-6  6-5  5-4  4-3  3-2  2-1
+DownDelays = array(0,0,0,0,0,0,0)
+
+UpOverrides = array(
+    "", #0-1
+    "", #1-2
+    "" #2-3
+)
+
+DownOverrides = array(
+    "", #3-2
+    "", #2-1
+    ""  #1-0
+)
+
+StartupClagDelay = 1 #Time required to hold starter for engine to turn on successfully
+StartupClagDuration = 1 #Duration for starter smoke
+
+CompressorType = 1 #0 for Shaft-driven, 1 for Electrical
+
+CompressorOn = "ether2001s_train_sounds/engine_sounds/hitachi/hitachi_compressor.wav"
+CompressorOff = "ether2001s_train_sounds/engine_sounds/hitachi/hitachi_compressor.wav"
+
+DynamicsOn = "moztrainsounds/electric/class321/c321_transformerpower.wav"
+DynamicsOff = "moztrainsounds/electric/class321/c321_transformer.wav"
+
+PrimeOn = "moztrainsounds/electric/class321/c321_spirax.wav"
+PrimeOff = "moztrainsounds/electric/class321/c321_spirax.wav"
+
+PrimerDuration = 1
+
+SoundDurations = table()
