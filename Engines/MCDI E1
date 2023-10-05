@@ -2,7 +2,7 @@
 #ENGINE CONFIG
 ENG_Version = "2.0.67"
 #For use in things that don't have an engine.
-EngineType = "MCDI EE1" #What is the name of the Prime Mover?
+EngineType = "MCDI E1" #What is the name of the Prime Mover?
 
 Startup_Hi = "ether2001s_train_sounds/misc/electrical/400v_2950rpm_dc_motor_startloop.wav" #Startup Sound to put the engine in High (Normal) Idle.
 Startup_Lo = "ether2001s_train_sounds/misc/electrical/400v_2950rpm_dc_motor_startloop.wav" #Startup Sound to put the engine in Low Idle.
